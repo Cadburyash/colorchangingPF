@@ -1,0 +1,406 @@
+:root{
+  --mainColor:#eaeaea;
+  --secondaryColor:#f7f7f7;
+
+  --borderColor:#c1c1c1;
+  --themeBorder: #24292e;
+
+  --mainText: #000;
+  --secondaryText:#4b5156;
+
+  --linkColor:#17a2b8;
+  
+  --personalBg: rgba(251,249,243,0.8);
+  --personal-Shadow: #f0ead6;
+
+  --btnColor: black;
+}
+
+
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+body *{
+  transition: 0.25s;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--mainText);
+  font-family: 'Fredoka One', cursive;
+  font-weight: 500;
+}
+
+p, li, span, label, input, textarea{
+  color: var(--secondaryText);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: var(--linkColor);
+}
+
+ul{
+  list-style: none;
+
+}
+
+h1{font-size: 56px;}
+h2{font-size: 36px;}
+h3{font-size: 28px;}
+h4{font-size: 24px;}
+h5{font-size: 20px;}
+h6{font-size: 16px;}
+
+
+.s1{
+  background-color: var(--mainColor);
+  border-bottom: 1px solid var(--borderColor);
+  overflow: auto;
+}
+
+.s2{
+  background-color: var(--secondaryColor);
+  border-bottom: 1px solid var(--borderColor);
+  overflow: auto;
+}
+
+.main-container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper{
+  display: grid;
+  text-align: center;
+  align-content: center;
+  min-height: 10em;
+  justify-content: center;
+}
+
+.intro{
+  background-color: var(--secondaryColor);
+  border-bottom: 1px solid var(--borderColor);
+  border-radius: 10px 10px 0 0;
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  grid-template-areas:
+  "nav nav"
+  "left right"
+  
+  ;
+}
+
+.intro-nav{
+  border-radius: 10px 10px 0 0;
+  grid-area: nav;
+  border-bottom: 1px solid var(--borderColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mainColor);
+
+}
+
+#nav-right{
+  margin: 0;
+  padding: 10px;
+}
+
+#nav-right li{
+  display: inline-block;
+  margin: 0 5px 0 5px;
+}
+
+.dots{
+  display: flex;
+  padding: 10px;
+}
+
+#dot-1{
+  background-color: #fc6058;
+  
+}
+
+#dot-2{
+  background-color: #fec02f;
+  
+}
+
+#dot-3{
+  background-color: #2aca3e;
+  
+}
+
+.dot{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 5px;
+
+  -webkit-box-shadow: -5px 6px 10px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -5px 6px 10px 1px rgba(0,0,0,0.75);
+  box-shadow: -5px 6px 10px 1px rgba(0,0,0,0.75);
+}
+
+.intro-left{
+  grid-area: left;
+  padding: 50px 0 50px 0;
+}
+
+.intro-left > h5{
+  text-align: center;
+  line-height: 0;
+}
+
+
+#profile-pic{
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--borderColor);
+}
+
+.theme-options{
+  display: flex;
+  justify-content:center;
+}
+
+.themes{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+  margin: 5px;
+  border: 2px solid var(--themeBorder);
+
+  -webkit-box-shadow: -5px 6px 10px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -5px 6px 10px 1px rgba(0,0,0,0.75);
+  box-shadow: -5px 6px 10px 1px rgba(0,0,0,0.75);
+  cursor: pointer;
+}
+
+.themes:hover {
+  border-width: 5px;
+}
+
+#light{
+  background-color: #fff;
+
+}
+
+#dark{
+  background-color: #000;
+
+}
+
+#green{
+  background-color: #78866b;
+
+}
+
+#purple{
+  background-color: #7e4c74;
+
+}
+
+#blue{
+  background-color: #192734;
+
+}
+
+#note{
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.intro-right{
+  grid-area: right;
+  display: grid;
+  align-items: center;
+
+  padding: 50px 0 50px 0;
+}
+
+.personal-Shadow{
+  background-color: var(--personal-Shadow);
+  width: 300px;
+  height: 300px;
+  padding: 30px 0 0 30px;
+}
+
+.personal{
+  width: 300px;
+  border: 2px solid #17a2b8;
+  background-color: var(--personalBg);
+  padding: 15px;
+  position: relative;
+}
+
+.corner{
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  border: 2px solid #17a2b8;
+  background-color: #fff;
+  position: absolute;
+}
+
+#ctl{
+  top: -5px;
+  left: -5px;
+}
+
+#ctr{
+  top: -5px;
+  right: -5px;
+}
+
+#cbl{
+  bottom: -5px;
+  left: -5px;
+}
+
+#cbr{
+  bottom: -5px;
+  right: -5px;
+}
+
+.about-wrapper{
+  display: grid;
+  grid-template-columns: repeat(Auto-fit, minmax(320px, 1fr));
+  padding: 50px 0 50px 0;
+  gap: 100px;
+}
+
+#skills{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--personal-Shadow);
+}
+
+.social{
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+}
+
+#social-img{
+  width: 100%;
+}
+
+.project-wrapper{
+  display: grid;
+  grid-template-columns: repeat(Auto-fit, 320px);
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.project{
+  border: 1px solid var(--borderColor);
+  border-radius: 20px 20px 0 0;
+}
+
+.thumbnail{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.project-preview{
+  background-color: #fff;
+  padding: 20px;
+  
+}
+
+.project-title{
+  color: #000;
+  margin: 0;
+}
+
+.project-details{
+  
+  color: var(--themeBorder);
+  font-size: 15px;
+}
+
+
+#contact-form{
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid var(--borderColor);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--mainColor);
+  margin-bottom: 50px;
+}
+
+#contact-form label{
+  line-height: 2.5em;
+}
+
+
+
+.input{
+  width: 100%;
+  padding: 10px 0 10px 0;
+  background-color: var(--secondaryColor);
+  border-radius: 10px;
+  border: 1px solid var(--borderColor);
+  font-size: 15px;
+}
+
+#submit{
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  color: #fff;
+  background-color: var(--btnColor);
+  border: none;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px){
+  .main-container{
+    width: 95%;
+  }
+}
+@media screen and (max-width: 800px){
+  .intro{
+    grid-template-columns: 1fr;
+    
+    grid-template-areas:
+    "nav"
+    "left"
+    "right"
+    ;
+  }
+  .intro-right{
+    justify-content: center;
+  }
+}

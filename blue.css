@@ -1,0 +1,19 @@
+:root{
+  --mainColor:#152028;
+  --secondaryColor:#192734;
+
+  --borderColor:#164d56;
+  --themeBorder: #fff;
+
+  --mainText: #fff;
+  --secondaryText:#eeeeee;
+
+  --linkColor:#17a2b8;
+  
+  --personalBg: rgba(25, 39, 52, 0.8);
+  --personal-Shadow: #111921;
+
+  --btnColor: #17a2b8;
+}
+
+
